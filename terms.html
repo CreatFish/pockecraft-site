@@ -1,128 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Pockecraft</title>
+    <title>用户协议 - 口袋工坊 | Terms of Service - Pockecraft</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { orange: '#F5873A', pink: '#E84393', purple: '#8f73f5' },
+                        surface: { DEFAULT: '#0a0a0f', raised: 'rgba(255,255,255,0.04)' }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.8;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #fff;
-            margin-bottom: 8px;
-            font-size: 2rem;
-        }
-        .updated {
-            color: #808080;
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #b05ced;
-            margin-top: 32px;
-            margin-bottom: 16px;
-            font-size: 1.3rem;
-        }
-        p, ul {
-            margin-bottom: 16px;
-            color: #c0c0c0;
-        }
-        ul {
-            padding-left: 24px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: #8f73f5;
-        }
-        .back {
-            display: inline-block;
-            margin-top: 40px;
-            color: #8f73f5;
-            text-decoration: none;
-        }
-        .back:hover {
-            text-decoration: underline;
-        }
+        body { background: #0a0a0f; color: #e0e0e0; }
+        nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        [data-lang="en"] { display: none; }
+        html[lang="en"] [data-lang="en"] { display: inline; }
+        html[lang="en"] [data-lang="zh"] { display: none; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Terms of Service</h1>
-        <p class="updated">Last updated: February 8, 2026</p>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="Pockecraft" class="w-9 h-9 rounded-lg">
+                <span class="text-white font-semibold text-lg">
+                    <span data-lang="zh">口袋工坊</span>
+                    <span data-lang="en">Pockecraft</span>
+                </span>
+            </a>
+            <button onclick="toggleLang()" class="px-3 py-1.5 rounded-full text-sm border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition" id="langToggle">EN</button>
+        </div>
+    </nav>
 
-        <p>Please read these Terms of Service ("Terms") carefully before using Pockecraft ("the app", "we", "our").</p>
+    <main class="pt-28 pb-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
+                <span data-lang="zh">用户协议</span>
+                <span data-lang="en">Terms of Service</span>
+            </h1>
+            <p class="text-white/40 mb-12">
+                <span data-lang="zh">最后更新：2026 年 3 月 14 日</span>
+                <span data-lang="en">Last updated: March 14, 2026</span>
+            </p>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By downloading, installing, or using Pockecraft, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the app.</p>
+            <div class="space-y-8 text-white/60 leading-relaxed">
+                <p>
+                    <span data-lang="zh">在使用口袋工坊之前，请仔细阅读本用户协议（"条款"）。</span>
+                    <span data-lang="en">Please read these Terms of Service ("Terms") carefully before using Pockecraft ("the app", "we", "our").</span>
+                </p>
 
-        <h2>2. Description of Service</h2>
-        <p>Pockecraft is an iOS application that allows users to create personalized tools using AI-powered code generation. Users describe their needs in natural language, and the app generates functional web-based tools that run locally on the device.</p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">1. 接受条款</span>
+                        <span data-lang="en">1. Acceptance of Terms</span>
+                    </h2>
+                    <p>
+                        <span data-lang="zh">下载、安装或使用口袋工坊即表示您同意受本条款的约束。如果您不同意这些条款，请不要使用该应用。</span>
+                        <span data-lang="en">By downloading, installing, or using Pockecraft, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the app.</span>
+                    </p>
+                </div>
 
-        <h2>3. User Responsibilities</h2>
-        <p>You agree to:</p>
-        <ul>
-            <li>Use the app only for lawful purposes</li>
-            <li>Not use the app to create tools that are harmful, offensive, or illegal</li>
-            <li>Not attempt to reverse engineer, modify, or distribute the app</li>
-            <li>Not use the app to generate content that infringes on intellectual property rights</li>
-        </ul>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">2. 服务说明</span>
+                        <span data-lang="en">2. Description of Service</span>
+                    </h2>
+                    <p>
+                        <span data-lang="zh">口袋工坊是一款 iOS 应用程序，允许用户使用 AI 驱动的代码生成来创建个性化工具。用户用自然语言描述需求，应用会生成在设备上本地运行的功能性网页工具。</span>
+                        <span data-lang="en">Pockecraft is an iOS application that allows users to create personalized tools using AI-powered code generation. Users describe their needs in natural language, and the app generates functional web-based tools that run locally on the device.</span>
+                    </p>
+                </div>
 
-        <h2>4. AI-Generated Content</h2>
-        <p>Tools created through Pockecraft are generated by artificial intelligence. While we strive for quality:</p>
-        <ul>
-            <li>We do not guarantee the accuracy, reliability, or fitness of generated tools</li>
-            <li>Generated tools may contain errors or unexpected behavior</li>
-            <li>You are responsible for reviewing and testing tools before relying on them</li>
-            <li>We are not liable for any damages resulting from the use of generated tools</li>
-        </ul>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">3. 用户责任</span>
+                        <span data-lang="en">3. User Responsibilities</span>
+                    </h2>
+                    <p class="mb-3">
+                        <span data-lang="zh">您同意：</span>
+                        <span data-lang="en">You agree to:</span>
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>
+                            <span data-lang="zh">仅将应用用于合法目的</span>
+                            <span data-lang="en">Use the app only for lawful purposes</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">不使用应用创建有害、攻击性或非法的工具</span>
+                            <span data-lang="en">Not use the app to create tools that are harmful, offensive, or illegal</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">不尝试对应用进行逆向工程、修改或分发</span>
+                            <span data-lang="en">Not attempt to reverse engineer, modify, or distribute the app</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">不使用应用生成侵犯知识产权的内容</span>
+                            <span data-lang="en">Not use the app to generate content that infringes on intellectual property rights</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <h2>5. Subscriptions</h2>
-        <p>Pockecraft offers optional subscription plans ("Pockecraft Pro") that provide additional features:</p>
-        <ul>
-            <li>Subscriptions are billed through your Apple ID account</li>
-            <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period</li>
-            <li>You can manage or cancel subscriptions in your App Store account settings</li>
-            <li>No refunds will be provided for partial subscription periods</li>
-        </ul>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">4. AI 生成的内容</span>
+                        <span data-lang="en">4. AI-Generated Content</span>
+                    </h2>
+                    <p class="mb-3">
+                        <span data-lang="zh">通过口袋工坊创建的工具由人工智能生成。虽然我们致力于提供高质量的服务：</span>
+                        <span data-lang="en">Tools created through Pockecraft are generated by artificial intelligence. While we strive for quality:</span>
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>
+                            <span data-lang="zh">我们不保证生成工具的准确性、可靠性或适用性</span>
+                            <span data-lang="en">We do not guarantee the accuracy, reliability, or fitness of generated tools</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">生成的工具可能包含错误或意外行为</span>
+                            <span data-lang="en">Generated tools may contain errors or unexpected behavior</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">您有责任在依赖工具之前对其进行审查和测试</span>
+                            <span data-lang="en">You are responsible for reviewing and testing tools before relying on them</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">我们对使用生成工具造成的任何损害不承担责任</span>
+                            <span data-lang="en">We are not liable for any damages resulting from the use of generated tools</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <h2>6. Intellectual Property</h2>
-        <p>The Pockecraft app, including its design, features, and branding, is owned by us and protected by intellectual property laws. Tools you create using the app are yours to use as you see fit.</p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">5. 订阅</span>
+                        <span data-lang="en">5. Subscriptions</span>
+                    </h2>
+                    <p class="mb-3">
+                        <span data-lang="zh">口袋工坊提供可选的订阅计划（"口袋工坊 Pro"），提供额外功能：</span>
+                        <span data-lang="en">Pockecraft offers optional subscription plans ("Pockecraft Pro") that provide additional features:</span>
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>
+                            <span data-lang="zh">订阅通过您的 Apple ID 帐户计费</span>
+                            <span data-lang="en">Subscriptions are billed through your Apple ID account</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">订阅会自动续订，除非在当前周期结束前至少 24 小时取消</span>
+                            <span data-lang="en">Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">您可以在 App Store 帐户设置中管理或取消订阅</span>
+                            <span data-lang="en">You can manage or cancel subscriptions in your App Store account settings</span>
+                        </li>
+                        <li>
+                            <span data-lang="zh">不提供部分订阅期的退款</span>
+                            <span data-lang="en">No refunds will be provided for partial subscription periods</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <h2>7. Disclaimer of Warranties</h2>
-        <p>THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS.</p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">6. 知识产权</span>
+                        <span data-lang="en">6. Intellectual Property</span>
+                    </h2>
+                    <p>
+                        <span data-lang="zh">口袋工坊应用（包括其设计、功能和品牌）为我们所有，受知识产权法保护。您使用应用创建的工具归您所有，您可以自由使用。</span>
+                        <span data-lang="en">The Pockecraft app, including its design, features, and branding, is owned by us and protected by intellectual property laws. Tools you create using the app are yours to use as you see fit.</span>
+                    </p>
+                </div>
 
-        <h2>8. Limitation of Liability</h2>
-        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE APP.</p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">7. 免责声明</span>
+                        <span data-lang="en">7. Disclaimer of Warranties</span>
+                    </h2>
+                    <p class="uppercase text-xs tracking-wide">
+                        <span data-lang="zh">本应用按"原样"提供，不提供任何明示或暗示的保证。我们不保证应用将不间断运行、无错误或不含有害组件。</span>
+                        <span data-lang="en">THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS.</span>
+                    </p>
+                </div>
 
-        <h2>9. Changes to Terms</h2>
-        <p>We reserve the right to modify these Terms at any time. Continued use of the app after changes constitutes acceptance of the new Terms.</p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">8. 责任限制</span>
+                        <span data-lang="en">8. Limitation of Liability</span>
+                    </h2>
+                    <p class="uppercase text-xs tracking-wide">
+                        <span data-lang="zh">在法律允许的最大范围内，我们不对因使用本应用而产生的任何间接、附带、特殊、后果性或惩罚性损害承担责任。</span>
+                        <span data-lang="en">TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE APP.</span>
+                    </p>
+                </div>
 
-        <h2>10. Termination</h2>
-        <p>We reserve the right to terminate or suspend your access to the app at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users or us.</p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">9. 条款变更</span>
+                        <span data-lang="en">9. Changes to Terms</span>
+                    </h2>
+                    <p>
+                        <span data-lang="zh">我们保留随时修改本条款的权利。在变更后继续使用应用即表示接受新条款。</span>
+                        <span data-lang="en">We reserve the right to modify these Terms at any time. Continued use of the app after changes constitutes acceptance of the new Terms.</span>
+                    </p>
+                </div>
 
-        <h2>11. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which the app developer resides, without regard to conflict of law principles.</p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">10. 终止</span>
+                        <span data-lang="en">10. Termination</span>
+                    </h2>
+                    <p>
+                        <span data-lang="zh">我们保留在任何时候以任何原因终止或暂停您对应用的访问的权利，恕不另行通知，特别是对于我们认为违反本条款或对其他用户或我们有害的行为。</span>
+                        <span data-lang="en">We reserve the right to terminate or suspend your access to the app at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users or us.</span>
+                    </p>
+                </div>
 
-        <h2>12. Contact</h2>
-        <p>For questions about these Terms, please contact us at:</p>
-        <p>Email: <a href="mailto:ydw0127@gmail.com">ydw0127@gmail.com</a></p>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">11. 适用法律</span>
+                        <span data-lang="en">11. Governing Law</span>
+                    </h2>
+                    <p>
+                        <span data-lang="zh">本条款应按照应用开发者所在司法管辖区的法律进行管辖和解释，不考虑法律冲突原则。</span>
+                        <span data-lang="en">These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which the app developer resides, without regard to conflict of law principles.</span>
+                    </p>
+                </div>
 
-        <a href="index.html" class="back">&larr; Back to Home</a>
-    </div>
+                <div>
+                    <h2 class="text-xl font-semibold text-white mb-3">
+                        <span data-lang="zh">12. 联系方式</span>
+                        <span data-lang="en">12. Contact</span>
+                    </h2>
+                    <p>
+                        <span data-lang="zh">如对本条款有任何疑问，请联系：</span>
+                        <span data-lang="en">For questions about these Terms, please contact us at:</span>
+                    </p>
+                    <p class="mt-2">
+                        <span data-lang="zh">邮箱：</span>
+                        <span data-lang="en">Email: </span>
+                        <a href="mailto:ydw0127@gmail.com" class="text-brand-purple hover:underline">ydw0127@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-6 text-sm text-white/40">
+                <a href="privacy.html" class="hover:text-white/70 transition">
+                    <span data-lang="zh">隐私协议</span>
+                    <span data-lang="en">Privacy Policy</span>
+                </a>
+                <a href="terms.html" class="hover:text-white/70 transition">
+                    <span data-lang="zh">用户协议</span>
+                    <span data-lang="en">Terms of Service</span>
+                </a>
+                <a href="support.html" class="hover:text-white/70 transition">
+                    <span data-lang="zh">支持</span>
+                    <span data-lang="en">Support</span>
+                </a>
+            </div>
+            <p class="text-sm text-white/25">&copy; 2026 Pocket Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            const html = document.documentElement;
+            const btn = document.getElementById('langToggle');
+            if (html.lang === 'zh') { html.lang = 'en'; btn.textContent = '中文'; }
+            else { html.lang = 'zh'; btn.textContent = 'EN'; }
+            localStorage.setItem('lang', html.lang);
+        }
+        (function() {
+            const saved = localStorage.getItem('lang');
+            if (saved) { document.documentElement.lang = saved; document.getElementById('langToggle').textContent = saved === 'en' ? '中文' : 'EN'; }
+            else if (navigator.language && navigator.language.startsWith('en')) { document.documentElement.lang = 'en'; document.getElementById('langToggle').textContent = '中文'; }
+        })();
+    </script>
 </body>
 </html>
